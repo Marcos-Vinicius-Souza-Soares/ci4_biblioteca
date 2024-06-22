@@ -1,0 +1,43 @@
+ERROR - 2024-06-13 02:33:09 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /opt/lampp/htdocs/ci4_biblioteca/system/Database/MySQLi/Connection.php:185
+Stack trace:
+#0 /opt/lampp/htdocs/ci4_biblioteca/system/Database/MySQLi/Connection.php(185): mysqli->real_connect()
+#1 /opt/lampp/htdocs/ci4_biblioteca/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /opt/lampp/htdocs/ci4_biblioteca/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 /opt/lampp/htdocs/ci4_biblioteca/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#4 /opt/lampp/htdocs/ci4_biblioteca/system/Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 /opt/lampp/htdocs/ci4_biblioteca/system/BaseModel.php(638): CodeIgniter\Model->doFindAll()
+#6 /opt/lampp/htdocs/ci4_biblioteca/app/Controllers/Aluno.php(17): CodeIgniter\BaseModel->findAll()
+#7 /opt/lampp/htdocs/ci4_biblioteca/system/CodeIgniter.php(941): App\Controllers\Aluno->index()
+#8 /opt/lampp/htdocs/ci4_biblioteca/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#9 /opt/lampp/htdocs/ci4_biblioteca/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#10 /opt/lampp/htdocs/ci4_biblioteca/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#11 /opt/lampp/htdocs/ci4_biblioteca/system/Commands/Server/rewrite.php(47): require_once('...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /opt/lampp/htdocs/ci4_biblioteca/system/Database/MySQLi/Connection.php:229
+Stack trace:
+#0 /opt/lampp/htdocs/ci4_biblioteca/system/Database/BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /opt/lampp/htdocs/ci4_biblioteca/system/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 /opt/lampp/htdocs/ci4_biblioteca/system/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+#3 /opt/lampp/htdocs/ci4_biblioteca/system/Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 /opt/lampp/htdocs/ci4_biblioteca/system/BaseModel.php(638): CodeIgniter\Model->doFindAll()
+#5 /opt/lampp/htdocs/ci4_biblioteca/app/Controllers/Aluno.php(17): CodeIgniter\BaseModel->findAll()
+#6 /opt/lampp/htdocs/ci4_biblioteca/system/CodeIgniter.php(941): App\Controllers\Aluno->index()
+#7 /opt/lampp/htdocs/ci4_biblioteca/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+#8 /opt/lampp/htdocs/ci4_biblioteca/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+#9 /opt/lampp/htdocs/ci4_biblioteca/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#10 /opt/lampp/htdocs/ci4_biblioteca/system/Commands/Server/rewrite.php(47): require_once('...')
+#11 {main}
+CRITICAL - 2024-06-13 02:33:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+in SYSTEMPATH/Database/BaseConnection.php on line 428.
+ 1 SYSTEMPATH/Database/BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(638): CodeIgniter\Model->doFindAll()
+ 5 APPPATH/Controllers/Aluno.php(17): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\Aluno->index()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest()
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Commands/Server/rewrite.php(47): require_once('/opt/lampp/htdocs/ci4_biblioteca/public/index.php')
